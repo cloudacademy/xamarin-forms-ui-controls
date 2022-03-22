@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xaml_UI.Views"
+             x:Class="Xaml_UI.Views.UserDetailsPage">
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+            <Frame BackgroundColor="{StaticResource DarkBlueButton}" Padding="5" CornerRadius="{StaticResource FrameCornerRounding}">
+                <Grid x:Name="Header">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.25*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="CAminiLogo.png" Grid.Row="0" Grid.Column="0" />
+                    <Label Text="User Details" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" 
+                           TextColor="{StaticResource DarkBlueButtonText}" FontSize="36"/>
+                </Grid>
+            </Frame>
+            <Label Text="Your Details" FontSize="Title" Margin="5,20,0,0"/>
+            <BoxView Color="Black" HeightRequest="1" />
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Name:" FontSize="Body" WidthRequest="55">
+                    <Label.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS" Value="0,10,0,0" />
+                            <On Platform="Android" Value="0,15,0,0" />
+                        </OnPlatform>
+                    </Label.Margin>
+                </Label>
+                <Editor x:Name="UserName" Placeholder="Enter name" HorizontalOptions="StartAndExpand"
+                        WidthRequest="300"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Label Text="Phone:" FontSize="Body" WidthRequest="55">
+                    
+                    <Label.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS" Value="0,10,0,0" />
+                            <On Platform="Android" Value="0,15,0,0" />
+                        </OnPlatform>
+                    </Label.Margin>
+                    
+                </Label>                    
+                <Editor x:Name="PhoneNo" Placeholder="Enter phone number" Keyboard="Telephone" HorizontalOptions="StartAndExpand"
+                        WidthRequest="300"/>
+            </StackLayout>
+            <local:AgeView />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xaml_UI.Views"
+             x:Class="Xaml_UI.Views.AgeView">
+
+  <ContentView.Content>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="DOBLabel" Text="D.O.B." FontSize="Body" Grid.Row="0" Grid.ColumnSpan="2" 
+                   HorizontalOptions="Start" />
+            <DatePicker x:Name="DOB_Picker" Format="D" VerticalOptions="Center" Grid.Row="1" Grid.ColumnSpan="2" Date="{Binding DOB}"
+            DateSelected="DOB_Picker_DateSelected"/>
+            <Label x:Name="Agelabel" Text="{Binding Age}" FontSize="Body" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Start" />
+            <Slider x:Name="AgeSlider" Minimum="0" Maximum="110" VerticalOptions="Center" MinimumTrackColor="Chocolate"
+                    ThumbColor="ForestGreen"
+                    Grid.Row="3" Grid.ColumnSpan="2" 
+                    Value="{Binding Age}" 
+                    ValueChanged="AgeSlider_ValueChanged"/>
+            <Label Text="0" Grid.Row="4" Grid.Column="0" HorizontalOptions="Start" />
+            <Label Text="110" Grid.Row="4" Grid.Column="1" HorizontalOptions="End" />
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

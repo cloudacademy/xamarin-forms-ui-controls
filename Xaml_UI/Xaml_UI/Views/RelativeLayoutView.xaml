@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xaml_UI.Views.RelativeLayoutView">
+  <ContentView.Content>
+      <RelativeLayout Margin="10">
+            <Frame x:Name="TitleBar" BackgroundColor="#252A8D" CornerRadius="10"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}">
+                <Label Text="Xamarin.Forms Relative layout" HorizontalOptions="Center" TextColor="White" />
+            </Frame>
+            <Frame x:Name="GreenBlueFrame" BorderColor="#252A8D" CornerRadius="10" Margin="0, 10, 0, 10"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=TitleBar,
+                    Property=Y,
+                    Constant=70}"                   
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}">
+                <BoxView BackgroundColor="ForestGreen" CornerRadius="10"></BoxView>
+            </Frame>
+            <Frame x:Name="TopRedFrame"  BackgroundColor="Red" CornerRadius="10" Margin="0,10"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=GreenBlueFrame,
+                    Property=Y,
+                    Factor=2.2}">
+                <Label Text="Left Box" TextColor="White" />
+            </Frame>
+            <Frame BackgroundColor="Yellow" CornerRadius="10" Margin="0,10"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=GreenBlueFrame,
+                    Property=Y,
+                    Factor=2.2}"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=0.36}">
+                <Label Text="Center Box" />
+            </Frame>
+            <Frame BackgroundColor="Blue" CornerRadius="10" Margin="0,10"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=GreenBlueFrame,
+                    Property=Y,
+                    Factor=2.2}"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Constant=-99}"                   >
+                <Label Text="Right Box" TextColor="White" />
+            </Frame>
+            <Frame x:Name="BottomRedFrame" BackgroundColor="Red" CornerRadius="10" 
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=TopRedFrame,
+                    Property=Height,
+                    Factor=4.5}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=0.31}">
+                <Label Text="Left Box" TextColor="White" />
+            </Frame>
+            <Frame BackgroundColor="Yellow" CornerRadius="10" 
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=BottomRedFrame,
+                    Property=Y,
+                    Factor=1}"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=BottomRedFrame,
+                    Property=Width,
+                    Factor=1.125}"                   
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=BottomRedFrame,
+                    Property=Width,
+                    Factor=1}">
+                <Label Text="Center Box" HorizontalTextAlignment="Center"/>
+            </Frame>
+            <Frame BackgroundColor="Blue" CornerRadius="10"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=BottomRedFrame,
+                    Property=Y,
+                    Factor=1}"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=BottomRedFrame,
+                    Property=Width,
+                    Factor=2.22}"                     
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=BottomRedFrame,
+                    Property=Width,
+                    Factor=1}">
+                <Label Text="Right Box" TextColor="White" HorizontalTextAlignment="End" />
+            </Frame>
+        </RelativeLayout>
+  </ContentView.Content>
+</ContentView>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xaml_UI.App">
+    <Application.Resources>
+        <Color x:Key="FrameBorderColor">ForestGreen</Color>
+        <ResourceDictionary Source="MyResources.xaml" />
+        <Style x:Key="MainPageButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource DarkBlueButton}" />
+            <Setter Property="TextColor" Value="{StaticResource DarkBlueButtonText}" />
+            <Setter Property="CornerRadius" Value="{StaticResource ButtonCornerRounding}" />
+            <Setter Property="FontFamily" Value="{StaticResource ButtonFont}" />
+            <Setter Property="FontSize" Value="{StaticResource ButtonFontSize}" />
+        </Style>
+    </Application.Resources>
+</Application>

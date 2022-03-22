@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xaml_UI.Views"
+             x:Class="Xaml_UI.MainPage">
+
+    <Frame BorderColor="{StaticResource FrameBorderColor}" CornerRadius="{StaticResource FrameCornerRounding}" Margin="10">
+        <StackLayout Margin="10">
+            <Button x:Name="LayoutsButton" Text="Layouts" Style="{DynamicResource MainPageButtonStyle}"
+                    Clicked="LayoutsButton_Clicked" />
+            <Button x:Name="ControlsButton" Text="Controls" Style="{DynamicResource MainPageButtonStyle}" Clicked="ControlsButton_Clicked"/>
+        </StackLayout>
+    </Frame>
+
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xaml_UI.Views.StackLayoutView">
+  <ContentView.Content>
+      <StackLayout>
+            <Frame BackgroundColor="#252A8D" CornerRadius="10" Margin="10">
+                <Label Text="Xamarin.Forms Stack layout" HorizontalOptions="Center" TextColor="White" />
+            </Frame>
+            <Frame BorderColor="#252A8D" CornerRadius="10" Margin="10">
+                <BoxView BackgroundColor="ForestGreen" CornerRadius="10"></BoxView>
+            </Frame>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Frame BackgroundColor="Red" CornerRadius="10" HorizontalOptions="StartAndExpand">
+                    <Label Text="Left Box" TextColor="White" />
+                </Frame>
+                <Frame BackgroundColor="Yellow" CornerRadius="10" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Center Box" HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame BackgroundColor="Blue" CornerRadius="10" HorizontalOptions="EndAndExpand">
+                    <Label Text="Right Box" TextColor="White" HorizontalTextAlignment="End" />
+                </Frame>                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Frame BackgroundColor="Red" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                    <Label Text="Left Box" TextColor="White"/>
+                </Frame>
+                <Frame BackgroundColor="Yellow" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                    <Label Text="Center Box"  HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame BackgroundColor="Blue" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                    <Label Text="Right Box" TextColor="White" HorizontalTextAlignment="End"/>
+                </Frame>
+            </StackLayout>
+        </StackLayout> 
+  </ContentView.Content>
+</ContentView>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xaml_UI.Views.AbsoluteLayoutView">
+  <ContentView.Content>
+      <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Frame BackgroundColor="#252A8D" CornerRadius="10" Margin="10" AbsoluteLayout.LayoutBounds="0, 0, 390, 90">
+                <Label Text="Xamarin.Forms Absolute layout" HorizontalOptions="Center" TextColor="White" />
+            </Frame>
+            <Frame BorderColor="#252A8D" CornerRadius="10" Margin="10" AbsoluteLayout.LayoutBounds="0, 90, 390, 110">
+                <BoxView BackgroundColor="ForestGreen" CornerRadius="10"></BoxView>
+            </Frame>
+            <AbsoluteLayout Margin="10">
+                <Frame BackgroundColor="Red" CornerRadius="10" AbsoluteLayout.LayoutBounds="0, 190, 100, 60">
+                    <Label Text="Left Box" TextColor="White" />
+                </Frame>
+                <Frame BackgroundColor="Yellow" CornerRadius="10" AbsoluteLayout.LayoutBounds="132, 190, 110, 60">
+                    <Label Text="Center Box" HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame BackgroundColor="Blue" CornerRadius="10" AbsoluteLayout.LayoutBounds="270, 190, 100, 60">
+                    <Label Text="Right Box" TextColor="White" HorizontalTextAlignment="End" />
+                </Frame>
+            </AbsoluteLayout>
+            <AbsoluteLayout Margin="10">
+                <Frame BackgroundColor="Red" CornerRadius="10" AbsoluteLayout.LayoutBounds="0, 270, 115, 60">
+                    <Label Text="Left Box" TextColor="White" />
+                </Frame>
+                <Frame BackgroundColor="Yellow" CornerRadius="10" AbsoluteLayout.LayoutBounds="132, 270, 115, 60">
+                    <Label Text="Center Box" HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame BackgroundColor="Blue" CornerRadius="10" AbsoluteLayout.LayoutBounds="255, 270, 115, 60">
+                    <Label Text="Right Box" TextColor="White" HorizontalTextAlignment="End" />
+                </Frame>
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+  </ContentView.Content>
+</ContentView>
